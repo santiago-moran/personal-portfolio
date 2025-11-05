@@ -15,7 +15,7 @@
         <nav class="navbar">
             <div>
                 <i class="fa-solid fa-code navbar__dev-logo"></i>
-                <a href="">Mi Portafolio</a>
+                <a href="#home">Mi Portafolio</a>
             </div>
             <div>
                 <input type="checkbox" id="menu-checker" class="menu-checker" aria-hidden="true">
@@ -23,18 +23,33 @@
                     <i class="fa-solid fa-bars open-menu"></i>
                 </label>
                 <ul class="menu-options">
-                    <li class="menu-options__option"><a href="">Inicio</a></li>
-                    <li class="menu-options__option"><a href="">Sobre Mi</a></li>
-                    <li class="menu-options__option"><a href="">Habilidades</a></li>
-                    <li class="menu-options__option"><a href="">Proyectos</a></li>
-                    <li class="menu-options__option"><a href="">Servicios</a></li>
-                    <li class="menu-options__option"><a href="">Contacto</a></li>
+                    <li class="menu-options__option"><a href="#home">Inicio</a></li>
+                    <li class="menu-options__option"><a href="#about">Sobre Mi</a></li>
+                    <li class="menu-options__option"><a href="#skills">Habilidades</a></li>
+                    <li class="menu-options__option"><a href="#projects">Proyectos</a></li>
+                    <li class="menu-options__option"><a href="#services">Servicios</a></li>
+                    <li class="menu-options__option"><a href="#contact">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        
+        <section class="section home" id="home">
+            <p class="home__web-dev-text">
+                <i class="fa-solid fa-code navbar__dev-logo"></i>
+                Desarrollador Web Frontend
+            <p>
+            <h1>Transformo ideas en <span class="clean-code">codigo limpio</span></h1>
+            <p class="home__description">Especializado en crear sitios web atractivos y funcionales con HTML y CSS. Diseño responsive que se ve perfecto en cualquier dispositivo.</p>
+            <div class="home__buttons">
+                <button class="buttons__start-project">
+                    <a href="#contact">Iniciar proyecto</a>
+                </button>
+                <button>
+                    <a href="#projects">Ver Proyectos</a>
+                </button>
+            </div>
+        </section>
     </main>
 </body>
 </html>

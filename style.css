@@ -2,7 +2,7 @@
 
 :root {
     --principal: #22c55e;
-    --background: #252525;
+    --background: #141414;
     --secondary-bckg: #454545;
     --text: #fafafa;
     --secondary-text: #b5b5b5;
@@ -47,6 +47,7 @@ input[type="checkbox"] {
     border-bottom: solid 1px #22c55e22;
     position: fixed;
     width: 100%;
+    top: 0;
 }
 .navbar:has(.menu-checker:checked) .menu-options {
     max-height: 800px;
@@ -83,3 +84,64 @@ input[type="checkbox"] {
 
 /*--- HOME ---*/
 
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 5%;
+}
+.home {
+    margin-top: 60px;
+    min-height: calc(100vh - 60px);
+    text-align: center;
+}
+.home__web-dev-text {
+    color: var(--principal);
+    border: solid 1px #22c55e22;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: clamp(.7rem, .9vw, 1rem);
+    align-content: center;
+    transition: border-color .5s, box-shadow .5s;
+    margin-bottom: 10px;
+}
+.home__web-dev-text:hover {
+    border-color: var(--principal);
+    box-shadow: 0 0 10px var(--principal);
+}
+.clean-code {
+    font-size: inherit;
+    color: var(--principal);
+}
+.home__description {
+    color: var(--secondary-text);
+    margin-top: 10px;
+}
+.home__buttons {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.home__buttons button {
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #252525;
+    color: var(--text);
+}
+.home__buttons a {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    transition: opacity .5s;
+}
+.buttons__start-project a {
+    background-color: var(--principal);
+    color: var(--background);
+}
+.home__buttons a:hover {
+    opacity: .8;
+}
