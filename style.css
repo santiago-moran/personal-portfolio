@@ -1,0 +1,16 @@
+:root {
+    --principal: #22c55e;
+    --background: #252525;
+    --secondary-bckg: #454545;
+    --text: #fafafa;
+    --secondary-text: #b5b5b5;
+}
+html {
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", monospace;
+}
