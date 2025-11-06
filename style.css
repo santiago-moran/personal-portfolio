@@ -159,25 +159,25 @@ input[type="checkbox"] {
     flex-direction: column;
     width: 100%;
 }
-.home__buttons button {
+button {
     margin-top: 20px;
     border: none;
     border-radius: 10px;
     background-color: #252525;
     color: var(--text);
 }
-.home__buttons a {
+.home__buttons a, .form button {
     width: 100%;
     height: 100%;
     padding: 8px;
     border-radius: 10px;
     transition: opacity .5s;
 }
-.buttons__start-project a {
+.buttons__start-project a, .form button {
     background-color: var(--principal);
     color: var(--background);
 }
-.home__buttons a:hover {
+.home__buttons a:hover, .form button:hover {
     opacity: .8;
 }
 
@@ -205,7 +205,7 @@ input[type="checkbox"] {
     border-radius: 10px;
     margin-right: 15px;
 }
-.card p {
+.card p, .card li {
     font-size: clamp(.7rem, .9vw, 1rem);
     color: var(--secondary-text);
     margin-top: 5px;
@@ -296,7 +296,7 @@ input[type="checkbox"] {
     padding: 0;
     margin: 0;
 }
-.projects__card:hover, .skills__card:hover {
+.projects__card:hover, .skills__card:hover, .contact .card:hover {
     border-color: #22c55e55;
     transform: none;
     box-shadow: none;
@@ -310,4 +310,84 @@ input[type="checkbox"] {
 }
 .img__overlay a:hover {
     opacity: .8;
+}
+
+/*--- CONTACT ---*/
+
+.form, .work-with-me {
+    flex-direction: column;
+    padding: 30px;
+}
+.form h4 {
+    margin-bottom: 20px;
+}
+.form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+.form input, textarea {
+    background-color: #23232377;
+    border: none;
+    outline: solid 1px #22c55e22;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    transition: outline .5s;
+    color: inherit;
+}
+textarea {
+    resize: none;
+    height: 100px;
+}
+.form button {
+    height: auto;
+    cursor: pointer;
+}
+form input:focus, textarea:focus {
+    outline-color: #22c55e55;
+}
+form input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #23232377 inset !important;
+    -webkit-text-fill-color: #fff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+.form label, input::placeholder, textarea::placeholder, form button {
+    font-size: clamp(.8rem, 1vw, 1.1rem);
+}
+.contact__another-contactWay {
+    margin-top: 50px;
+    width: 100%;
+}
+.contact h4 {
+    color: var(--text);
+}
+.contact a {
+    color: var(--principal);
+    font-size: clamp(.8rem, 1vw, 1.1rem);
+    transition: opacity .5s;
+}
+.contact a:hover {
+    opacity: .5;
+}
+.card li::marker {
+    content: '✓';
+    color: var(--principal);
+}
+.work-with-me {
+    background-color: #22c55e11;
+}
+.work-with-me h4, .work-with-me ul {
+    align-self: start;
+    padding: 0;
+}
+.work-with-me h4 {
+    color: var(--principal);
+    font-size: clamp(.8rem, 1vw, 1.1rem);
+    margin-bottom: 10px;
+}
+.work-with-me li {
+    margin-top: 15px;
+    margin-left: 10px;
 }
