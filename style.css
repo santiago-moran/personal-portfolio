@@ -37,6 +37,14 @@ a {
     color: inherit;
     display: inline-block;
 }
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: scale .5s;
+}
 input[type="checkbox"] {
     display: none;
 }
@@ -50,7 +58,7 @@ input[type="checkbox"] {
     margin-top: 20px;
     color: var(--secondary-text);
 }
-.section h3 {
+.section h3, .section__description {
     align-self: start;
 }
 
@@ -67,6 +75,7 @@ input[type="checkbox"] {
     width: 100%;
     top: 0;
     background-color: var(--background);
+    z-index: 10;
 }
 .navbar:has(.menu-checker:checked) .menu-options {
     max-height: 800px;
@@ -179,6 +188,8 @@ input[type="checkbox"] {
     width: 100%;
 }
 .card {
+    width: 100%;
+    max-width: 500px;
     display: flex;
     align-items: center;
     border: solid 1px #22c55e22;
@@ -207,7 +218,7 @@ input[type="checkbox"] {
 
 /*--- SKILLS ---*/
 
-.skills__card {
+.skills__card, .projects__card {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100px;
@@ -215,18 +226,82 @@ input[type="checkbox"] {
 .skills__card h4, .skills__card div {
     align-self: start;
 }
-.skills__card div {
+.skills__card div, .projects__card > div:last-child div{
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
 }
-.skills__card p {
+.skills__card p, .projects__card > div:last-child div p {
     margin-right: 5px;
     border: solid 1px #22c55e22;
     border-radius: 10px;
     padding: 1px 10px;
     transition: border-color .5s;
 }
-.skills__card p:hover {
+.skills__card p:hover,  .projects__card > div:last-child div p:hover {
     border-color: var(--principal);
+}
+
+/*--- PROJECTS ---*/
+
+.projects__card {
+    padding: 0;
+}
+.card__img {
+    width: 100%;
+    height: 190px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+.projects h4 {
+    color: var(--text);
+}
+.projects__card > div:last-child{
+    padding: 0 20px 20px 20px;
+}
+.img__overlay {
+    background-color: #14141488;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img__overlay a {
+    display: flex;
+    align-items: center;
+    background-color: #343434;
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: opacity .5s;
+}
+.img__overlay p {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    color: var(--text);
+    font-size: clamp(1rem, 2vw, 1.1rem);
+}
+.projects__card:hover {
+    border-color: #22c55e55;
+    transform: none;
+    box-shadow: none;
+}
+.projects__card:hover .img__overlay {
+    opacity: 1;
+    pointer-events: all;
+}
+.projects__card:hover .card__img img {
+    scale: 1.1;
+}
+.img__overlay a:hover {
+    opacity: .8;
 }
