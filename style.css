@@ -198,7 +198,7 @@ input[type="checkbox"] {
     margin-top: 20px;
     transition: border-color .5s, box-shadow .5s, transform .5s;
 }
-.about__card i {
+.card i {
     color: var(--principal);
     background-color: #22c55e11;
     padding: 10px;
