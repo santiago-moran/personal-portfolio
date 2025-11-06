@@ -290,7 +290,13 @@ input[type="checkbox"] {
     color: var(--text);
     font-size: clamp(1rem, 2vw, 1.1rem);
 }
-.projects__card:hover {
+.img__overlay i {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+}
+.projects__card:hover, .skills__card:hover {
     border-color: #22c55e55;
     transform: none;
     box-shadow: none;
