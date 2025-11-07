@@ -242,7 +242,7 @@ button {
     padding: 1px 10px;
     transition: border-color .5s;
 }
-.skills__card p:hover,  .projects__card > div:last-child div p:hover {
+.skills__card p:hover, .card__technologies p:hover {
     border-color: var(--principal);
 }
 
