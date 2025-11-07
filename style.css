@@ -230,12 +230,12 @@ button {
 .skills__card h4, .skills__card div {
     align-self: start;
 }
-.skills__card div, .projects__card > div:last-child div{
+.skills__card div, .card__technologies{
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
 }
-.skills__card p, .projects__card > div:last-child div p {
+.skills__card p, .card__technologies p{
     margin-right: 5px;
     border: solid 1px #22c55e22;
     border-radius: 10px;
@@ -250,6 +250,10 @@ button {
 
 .projects__card {
     padding: 0;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .card__img {
     width: 100%;
@@ -263,8 +267,12 @@ button {
 .projects h4 {
     color: var(--text);
 }
-.projects__card > div:last-child{
-    padding: 0 20px 20px 20px;
+.card__text{
+    padding: 0 20px 0 20px;
+}
+.card__technologies {
+    padding: 0 0 20px 20px;
+    width: 100%;
 }
 .img__overlay {
     background-color: #14141488;
