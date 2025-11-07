@@ -186,6 +186,10 @@ button {
 .cards {
     margin-top: 20px;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .card {
     width: 100%;
@@ -195,7 +199,7 @@ button {
     border: solid 1px #22c55e22;
     border-radius: 10px;
     padding: 20px;
-    margin-top: 20px;
+    margin: 20px;
     transition: border-color .5s, box-shadow .5s, transform .5s;
 }
 .card i, footer i {
@@ -358,7 +362,9 @@ form input:-webkit-autofill {
 }
 .contact__another-contactWay {
     margin-top: 50px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .contact h4 {
     color: var(--text);
@@ -392,6 +398,14 @@ form input:-webkit-autofill {
     margin-left: 10px;
     padding-left: 5px;
 }
+.contact > div {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
 /*--- FOOTER ---*/
 
@@ -412,4 +426,63 @@ footer i {
 }
 footer a:hover {
     opacity: .8;
+}
+
+/*--- MEDIA QUERIES ---*/
+
+@media screen and (min-width: 650px) {
+    .home__buttons {
+        flex-direction: row;
+        justify-content: center ;
+    }
+    .home__buttons button {
+        margin: 50px 10px;
+        width: 280px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .about > div {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .about__cards {
+        width: 50%;
+    }
+    .about > div > div:first-child {
+        width: 50%;
+    }
+    .contact__another-contactWay {
+        flex-shrink: 0;
+    }
+    form {
+        flex-shrink: 0;
+    }
+}
+@media screen and (min-width: 1240px) {
+    .navbar {
+        overflow: hidden;
+    }
+    .open-menu {
+        display: none;
+    }
+    .menu-options {
+        position: static;
+        background-color: transparent;
+        border-bottom: none;
+        max-height: max-content;
+        width: max-content;
+        display: flex;
+        transition: max-height .3s linear;
+    }
+    .menu-options__option a {
+        padding: 10px 20px;
+    }
+    .menu-options__option {
+        border-radius: 10px;
+    }
+    .contact__another-contactWay {
+        width: 50%;
+    }
 }
