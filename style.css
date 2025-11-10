@@ -6,6 +6,11 @@
     --secondary-bckg: #454545;
     --text: #fafafa;
     --secondary-text: #b5b5b5;
+    --smaller-fontSize: clamp(.7rem, .9vw, 1rem);
+    --small-fontSize: clamp(.8rem, 1vw, 1.1rem);
+    --medium-fontSize: clamp(1rem, 2vw, 1.1rem);
+    --big-fontSize: clamp(2rem, 5vw, 3rem);
+    --bigger-fontSize: clamp(2.5rem, 6vw, 3.5rem);
 }
 html {
     scroll-behavior: smooth;
@@ -15,20 +20,20 @@ html {
     margin: 0;
     box-sizing: border-box;
     font-family: "JetBrains Mono", monospace;
-    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-size: var(--medium-fontSize)
 }
 body {
     background-color: var(--background);
     color: var(--text);
 }
 h1 {
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-size: var(--bigger-fontSize);
 }
 h2, h3 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: var(--big-fontSize);
 }
 h4 {
-    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-size: var(--medium-fontSize);
     color: var(--principal);
     font-weight: normal;
 }
@@ -51,7 +56,7 @@ input[type="checkbox"] {
 .section__title {
     color: var(--principal);
     align-self: start;
-    font-size: clamp(1rem, 2vw, 1rem);
+    font-size: var(--medium-fontSize);
     margin-bottom: 15px;
 }
 .section__description {
@@ -112,6 +117,7 @@ input[type="checkbox"] {
     padding: 20px;
     width: 100%;
     height: 100%;
+    font-size: var(--small-fontSize);
 }
 .menu-options__option:hover {
     background-color: var(--secondary-bckg);
@@ -136,7 +142,7 @@ input[type="checkbox"] {
     border: solid 1px #22c55e22;
     border-radius: 50px;
     padding: 10px;
-    font-size: clamp(.7rem, .9vw, 1rem);
+    font-size: var(--smaller-fontSize);
     align-content: center;
     transition: border-color .5s, box-shadow .5s;
     margin-bottom: 10px;
@@ -210,7 +216,7 @@ button {
     margin-right: 15px;
 }
 .card p, .card li, footer p {
-    font-size: clamp(.7rem, .9vw, 1rem);
+    font-size: var(--smaller-fontSize);
     color: var(--secondary-text);
     margin-top: 5px;
 }
@@ -300,7 +306,7 @@ button {
     margin-left: 10px;
     margin-bottom: 5px;
     color: var(--text);
-    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-size: var(--medium-fontSize);
 }
 .img__overlay i {
     background-color: transparent;
@@ -366,7 +372,7 @@ form input:-webkit-autofill {
     transition: background-color 5000s ease-in-out 0s;
 }
 .form label, input::placeholder, textarea::placeholder, form button {
-    font-size: clamp(.8rem, 1vw, 1.1rem);
+    font-size: var(--small-fontSize);
 }
 .contact__another-contactWay {
     margin-top: 50px;
@@ -379,7 +385,7 @@ form input:-webkit-autofill {
 }
 .contact a {
     color: var(--principal);
-    font-size: clamp(.8rem, 1vw, 1.1rem);
+    font-size: var(--small-fontSize);
     transition: opacity .5s;
 }
 .contact a:hover {
@@ -398,7 +404,7 @@ form input:-webkit-autofill {
 }
 .work-with-me h4 {
     color: var(--principal);
-    font-size: clamp(.8rem, 1vw, 1.1rem);
+    font-size: var(--small-fontSize);
     margin-bottom: 10px;
 }
 .work-with-me li {
